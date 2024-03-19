@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  .btn-satu {
+    @apply bg-primary py-4 px-14 text-slate-100 rounded-lg font-medium text-base;
+  }
+}
+
+@layer components {
+  .head-bg {
+    @apply text-6xl font-bold mb-4 bg-gradient-to-t from-transparent to-black/30 bg-clip-text text-transparent;
+  }
+}
+
+@layer components {
+  .hbgr-ln {
+    @apply w-[30px] h-[2px] my-2 block bg-black;
+  }
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-50 backdrop-blur-sm;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.hbgr-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hbgr-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hbgr-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
